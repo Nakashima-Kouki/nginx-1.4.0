@@ -1969,8 +1969,7 @@ ngx_http_split_args(ngx_http_request_t *r, ngx_str_t *uri, ngx_str_t *args)
 
 
 ngx_int_t
-ngx_http_parse_chunked(ngx_http_request_t *r, ngx_buf_t *b,
-    ngx_http_chunked_t *ctx)
+ngx_http_parse_chunked(ngx_http_request_t *r, ngx_buf_t *b, ngx_http_chunked_t *ctx)
 {
     u_char     *pos, ch, c;
     ngx_int_t   rc;
@@ -1999,11 +1998,7 @@ ngx_http_parse_chunked(ngx_http_request_t *r, ngx_buf_t *b,
     rc = NGX_AGAIN;
 
     for (pos = b->pos; pos < b->last; pos++) {
-
         ch = *pos;
-
-        ngx_log_debug2(NGX_LOG_DEBUG_HTTP, r->connection->log, 0,
-                       "http chunked byte: %02Xd s:%d", ch, state);
 
         switch (state) {
 
@@ -2025,6 +2020,10 @@ ngx_http_parse_chunked(ngx_http_request_t *r, ngx_buf_t *b,
             goto invalid;
 
         case sw_chunk_size:
+            if (ctx->size > NGX_MAX_OFF_T_VALUE / 16) {
+                goto invalid;
+            }
+
             if (ch >= '0' && ch <= '9') {
                 ctx->size = ctx->size * 16 + (ch - '0');
                 break;
@@ -2038,7 +2037,6 @@ ngx_http_parse_chunked(ngx_http_request_t *r, ngx_buf_t *b,
             }
 
             if (ctx->size == 0) {
-
                 switch (ch) {
                 case CR:
                     state = sw_last_chunk_extension_almost_done;
@@ -2054,7 +2052,6 @@ ngx_http_parse_chunked(ngx_http_request_t *r, ngx_buf_t *b,
                 default:
                     goto invalid;
                 }
-
                 break;
             }
 
@@ -2064,7 +2061,7 @@ ngx_http_parse_chunked(ngx_http_request_t *r, ngx_buf_t *b,
                 break;
             case LF:
                 state = sw_chunk_data;
-                break;
+                goto data;
             case ';':
             case ' ':
             case '\t':
@@ -2073,7 +2070,6 @@ ngx_http_parse_chunked(ngx_http_request_t *r, ngx_buf_t *b,
             default:
                 goto invalid;
             }
-
             break;
 
         case sw_chunk_extension:
@@ -2083,13 +2079,14 @@ ngx_http_parse_chunked(ngx_http_request_t *r, ngx_buf_t *b,
                 break;
             case LF:
                 state = sw_chunk_data;
+                goto data;
             }
             break;
 
         case sw_chunk_extension_almost_done:
             if (ch == LF) {
                 state = sw_chunk_data;
-                break;
+                goto data;
             }
             goto invalid;
 
@@ -2104,6 +2101,9 @@ ngx_http_parse_chunked(ngx_http_request_t *r, ngx_buf_t *b,
                 break;
             case LF:
                 state = sw_chunk_start;
+                break;
+            default:
+                goto invalid;
             }
             break;
 
@@ -2121,6 +2121,7 @@ ngx_http_parse_chunked(ngx_http_request_t *r, ngx_buf_t *b,
                 break;
             case LF:
                 state = sw_trailer;
+                break;
             }
             break;
 
@@ -2140,6 +2141,7 @@ ngx_http_parse_chunked(ngx_http_request_t *r, ngx_buf_t *b,
                 goto done;
             default:
                 state = sw_trailer_header;
+                break;
             }
             break;
 
@@ -2156,6 +2158,7 @@ ngx_http_parse_chunked(ngx_http_request_t *r, ngx_buf_t *b,
                 break;
             case LF:
                 state = sw_trailer;
+                break;
             }
             break;
 
@@ -2174,47 +2177,21 @@ data:
     ctx->state = state;
     b->pos = pos;
 
-    switch (state) {
-
-    case sw_chunk_start:
-        ctx->length = 3 /* "0" LF LF */;
-        break;
-    case sw_chunk_size:
-        ctx->length = 2 /* LF LF */
-                      + (ctx->size ? ctx->size + 4 /* LF "0" LF LF */ : 0);
-        break;
-    case sw_chunk_extension:
-    case sw_chunk_extension_almost_done:
-        ctx->length = 1 /* LF */ + ctx->size + 4 /* LF "0" LF LF */;
-        break;
-    case sw_chunk_data:
-        ctx->length = ctx->size + 4 /* LF "0" LF LF */;
-        break;
-    case sw_after_data:
-    case sw_after_data_almost_done:
-        ctx->length = 4 /* LF "0" LF LF */;
-        break;
-    case sw_last_chunk_extension:
-    case sw_last_chunk_extension_almost_done:
-        ctx->length = 2 /* LF LF */;
-        break;
-    case sw_trailer:
-    case sw_trailer_almost_done:
-        ctx->length = 1 /* LF */;
-        break;
-    case sw_trailer_header:
-    case sw_trailer_header_almost_done:
-        ctx->length = 2 /* LF LF */;
-        break;
-
+    if (state > sw_chunk_data) {
+        ctx->length = 3; 
+    } else if (state == sw_chunk_data) {
+        ctx->length = ctx->size + 4; 
+    } else {
+        ctx->length = 0;
     }
 
     return rc;
 
 done:
 
-    ctx->state = 0;
+    ctx->state = state;
     b->pos = pos + 1;
+    ctx->length = 0;
 
     return NGX_DONE;
 

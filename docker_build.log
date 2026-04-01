@@ -1,0 +1,730 @@
+failed to fetch metadata: fork/exec /usr/local/lib/docker/cli-plugins/docker-buildx: no such file or directory
+
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  10.95MB
+Step 1/8 : FROM i386/debian:bullseye
+ ---> 5a69e60719c8
+Step 2/8 : RUN apt-get update && apt-get install -y build-essential libpcre3-dev zlib1g-dev libssl-dev wget net-tools python gdb dos2unix
+ ---> Using cache
+ ---> f9764a70c456
+Step 3/8 : WORKDIR /usr/src/nginx
+ ---> Using cache
+ ---> ebd0cdf6b7da
+Step 4/8 : COPY . .
+ ---> 173be327a699
+Step 5/8 : RUN dos2unix configure && find auto -type f -exec dos2unix {} +
+ ---> Running in 177506ca4dce
+[91mdos2unix: converting file configure to Unix format...
+[0m[91mdos2unix: converting file auto/options to Unix format...
+dos2unix: converting file auto/nohave to Unix format...
+[0m[91mdos2unix: converting file auto/have_headers to Unix format...
+dos2unix: converting file auto/endianness to Unix format...
+[0m[91mdos2unix: converting file auto/unix to Unix format...
+dos2unix: converting file auto/have to Unix format...
+[0m[91mdos2unix: converting file auto/feature to Unix format...
+[0m[91mdos2unix: converting file auto/headers to Unix format...
+dos2unix: converting file auto/stubs to Unix format...
+[0m[91mdos2unix: converting file auto/install to Unix format...
+dos2unix: converting file auto/include to Unix format...
+[0m[91mdos2unix: converting file auto/modules to Unix format...
+[0m[91mdos2unix: converting file auto/os/linux to Unix format...
+[0m[91mdos2unix: converting file auto/os/conf to Unix format...
+[0m[91mdos2unix: converting file auto/os/darwin to Unix format...
+dos2unix: converting file auto/os/win32 to Unix format...
+[0m[91mdos2unix: converting file auto/os/freebsd to Unix format...
+dos2unix: converting file auto/os/solaris to Unix format...
+[0m[91mdos2unix: converting file auto/lib/sha1/conf to Unix format...
+dos2unix: converting file auto/lib/sha1/makefile.bcc to Unix format...
+[0m[91mdos2unix: converting file auto/lib/sha1/make to Unix format...
+dos2unix: converting file auto/lib/sha1/makefile.owc to Unix format...
+dos2unix: converting file auto/lib/sha1/makefile.msvc to Unix format...
+[0m[91mdos2unix: converting file auto/lib/libxslt/conf to Unix format...
+[0m[91mdos2unix: converting file auto/lib/perl/conf to Unix format...
+[0m[91mdos2unix: converting file auto/lib/perl/make to Unix format...
+[0m[91mdos2unix: converting file auto/lib/zlib/patch.zlib.h to Unix format...
+dos2unix: converting file auto/lib/zlib/conf to Unix format...
+dos2unix: converting file auto/lib/zlib/makefile.bcc to Unix format...
+[0m[91mdos2unix: converting file auto/lib/zlib/make to Unix format...
+dos2unix: converting file auto/lib/zlib/makefile.owc to Unix format...
+[0m[91mdos2unix: converting file auto/lib/zlib/makefile.msvc to Unix format...
+dos2unix: converting file auto/lib/conf to Unix format...
+[0m[91mdos2unix: converting file auto/lib/pcre/conf to Unix format...
+dos2unix: converting file auto/lib/pcre/makefile.bcc to Unix format...
+[0m[91mdos2unix: converting file auto/lib/pcre/make to Unix format...
+dos2unix: converting file auto/lib/pcre/makefile.owc to Unix format...
+[0m[91mdos2unix: converting file auto/lib/pcre/makefile.msvc to Unix format...
+[0m[91mdos2unix: converting file auto/lib/md5/conf to Unix format...
+dos2unix: converting file auto/lib/md5/makefile.bcc to Unix format...
+[0m[91mdos2unix: converting file auto/lib/md5/make to Unix format...
+[0m[91mdos2unix: converting file auto/lib/md5/makefile.owc to Unix format...
+dos2unix: converting file auto/lib/md5/makefile.msvc to Unix format...
+[0m[91mdos2unix: converting file auto/lib/libgd/conf to Unix format...
+[0m[91mdos2unix: converting file auto/lib/test to Unix format...
+dos2unix: converting file auto/lib/make to Unix format...
+[0m[91mdos2unix: converting file auto/lib/geoip/conf to Unix format...
+[0m[91mdos2unix: converting file auto/lib/libatomic/conf to Unix format...
+dos2unix: converting file auto/lib/libatomic/make to Unix format...
+[0m[91mdos2unix: converting file auto/lib/google-perftools/conf to Unix format...
+[0m[91mdos2unix: converting file auto/lib/openssl/conf to Unix format...
+dos2unix: converting file auto/lib/openssl/makefile.bcc to Unix format...
+[0m[91mdos2unix: converting file auto/lib/openssl/make to Unix format...
+[0m[91mdos2unix: converting file auto/lib/openssl/makefile.msvc to Unix format...
+[0m[91mdos2unix: converting file auto/types/sizeof to Unix format...
+[0m[91mdos2unix: converting file auto/types/typedef to Unix format...
+dos2unix: converting file auto/types/uintptr_t to Unix format...
+dos2unix: converting file auto/types/value to Unix format...
+[0m[91mdos2unix: converting file auto/define to Unix format...
+dos2unix: converting file auto/init to Unix format...
+[0m[91mdos2unix: converting file auto/cc/ccc to Unix format...
+dos2unix: converting file auto/cc/icc to Unix format...
+[0m[91mdos2unix: converting file auto/cc/name to Unix format...
+dos2unix: converting file auto/cc/bcc to Unix format...
+[0m[91mdos2unix: converting file auto/cc/gcc to Unix format...
+dos2unix: converting file auto/cc/clang to Unix format...
+[0m[91mdos2unix: converting file auto/cc/conf to Unix format...
+[0m[91mdos2unix: converting file auto/cc/sunc to Unix format...
+[0m[91mdos2unix: converting file auto/cc/msvc to Unix format...
+[0m[91mdos2unix: converting file auto/cc/acc to Unix format...
+dos2unix: converting file auto/cc/owc to Unix format...
+[0m[91mdos2unix: converting file auto/summary to Unix format...
+[0m[91mdos2unix: converting file auto/make to Unix format...
+[0m[91mdos2unix: converting file auto/sources to Unix format...
+[0m ---> Removed intermediate container 177506ca4dce
+ ---> 32dbb7885734
+Step 6/8 : RUN ./configure --with-cc-opt="-fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type" --with-ld-opt="" && make
+ ---> Running in 9dd32e40b32f
+checking for OS
+ + Linux 6.6.87.2-microsoft-standard-WSL2 x86_64
+checking for C compiler ... found
+ + using GNU C compiler
+ + gcc version: 10.2.1 20210110 (Debian 10.2.1-6) 
+checking for gcc -pipe switch ... found
+checking for gcc builtin atomic operations ... found
+checking for C99 variadic macros ... found
+checking for gcc variadic macros ... found
+checking for unistd.h ... found
+checking for inttypes.h ... found
+checking for limits.h ... found
+checking for sys/filio.h ... not found
+checking for sys/param.h ... found
+checking for sys/mount.h ... found
+checking for sys/statvfs.h ... found
+checking for crypt.h ... found
+checking for Linux specific features
+checking for epoll ... found
+checking for sendfile() ... found
+checking for sendfile64() ... found
+checking for sys/prctl.h ... found
+checking for prctl(PR_SET_DUMPABLE) ... found
+checking for sched_setaffinity() ... found
+checking for crypt_r() ... found
+checking for sys/vfs.h ... found
+checking for nobody group ... not found
+checking for nogroup group ... found
+checking for poll() ... found
+checking for /dev/poll ... not found
+checking for kqueue ... not found
+checking for crypt() ... not found
+checking for crypt() in libcrypt ... found
+checking for F_READAHEAD ... not found
+checking for posix_fadvise() ... found
+checking for O_DIRECT ... found
+checking for F_NOCACHE ... not found
+checking for directio() ... not found
+checking for statfs() ... found
+checking for statvfs() ... found
+checking for dlopen() ... not found
+checking for dlopen() in libdl ... found
+checking for sched_yield() ... found
+checking for SO_SETFIB ... not found
+checking for SO_ACCEPTFILTER ... not found
+checking for TCP_DEFER_ACCEPT ... found
+checking for TCP_KEEPIDLE, TCP_KEEPINTVL, TCP_KEEPCNT ... found
+checking for TCP_INFO ... found
+checking for accept4() ... found
+checking for int size ... 4 bytes
+checking for long size ... 4 bytes
+checking for long long size ... 8 bytes
+checking for void * size ... 4 bytes
+checking for uint64_t ... found
+checking for sig_atomic_t ... found
+checking for sig_atomic_t size ... 4 bytes
+checking for socklen_t ... found
+checking for in_addr_t ... found
+checking for in_port_t ... found
+checking for rlim_t ... found
+checking for uintptr_t ... uintptr_t found
+checking for system byte ordering ... little endian
+checking for size_t size ... 4 bytes
+checking for off_t size ... 8 bytes
+checking for time_t size ... 4 bytes
+checking for setproctitle() ... not found
+checking for pread() ... found
+checking for pwrite() ... found
+checking for sys_nerr ... found
+checking for localtime_r() ... found
+checking for posix_memalign() ... found
+checking for memalign() ... found
+checking for mmap(MAP_ANON|MAP_SHARED) ... found
+checking for mmap("/dev/zero", MAP_SHARED) ... found
+checking for System V shared memory ... found
+checking for POSIX semaphores ... not found
+checking for POSIX semaphores in libpthread ... found
+checking for struct msghdr.msg_control ... found
+checking for ioctl(FIONBIO) ... found
+checking for struct tm.tm_gmtoff ... found
+checking for struct dirent.d_namlen ... not found
+checking for struct dirent.d_type ... found
+checking for sysconf(_SC_NPROCESSORS_ONLN) ... found
+checking for openat(), fstatat() ... found
+checking for getaddrinfo() ... found
+checking for PCRE library ... found
+checking for PCRE JIT support ... found
+checking for md5 in system md library ... not found
+checking for md5 in system md5 library ... not found
+checking for md5 in system OpenSSL crypto library ... found
+checking for sha1 in system md library ... not found
+checking for sha1 in system OpenSSL crypto library ... found
+checking for zlib library ... found
+creating objs/Makefile
+
+Configuration summary
+  + using system PCRE library
+  + OpenSSL library is not used
+  + md5: using system crypto library
+  + sha1: using system crypto library
+  + using system zlib library
+
+  nginx path prefix: "/usr/local/nginx"
+  nginx binary file: "/usr/local/nginx/sbin/nginx"
+  nginx configuration prefix: "/usr/local/nginx/conf"
+  nginx configuration file: "/usr/local/nginx/conf/nginx.conf"
+  nginx pid file: "/usr/local/nginx/logs/nginx.pid"
+  nginx error log file: "/usr/local/nginx/logs/error.log"
+  nginx http access log file: "/usr/local/nginx/logs/access.log"
+  nginx http client request body temporary files: "client_body_temp"
+  nginx http proxy temporary files: "proxy_temp"
+  nginx http fastcgi temporary files: "fastcgi_temp"
+  nginx http uwsgi temporary files: "uwsgi_temp"
+  nginx http scgi temporary files: "scgi_temp"
+
+make -f objs/Makefile
+make[1]: Entering directory '/usr/src/nginx'
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/nginx.o \
+	src/core/nginx.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/nginx.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_log.o \
+	src/core/ngx_log.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_log.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_palloc.o \
+	src/core/ngx_palloc.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_palloc.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_array.o \
+	src/core/ngx_array.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_array.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_list.o \
+	src/core/ngx_list.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_list.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_hash.o \
+	src/core/ngx_hash.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_hash.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_buf.o \
+	src/core/ngx_buf.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_buf.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_queue.o \
+	src/core/ngx_queue.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_queue.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_output_chain.o \
+	src/core/ngx_output_chain.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_output_chain.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_string.o \
+	src/core/ngx_string.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_string.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_parse.o \
+	src/core/ngx_parse.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_parse.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_inet.o \
+	src/core/ngx_inet.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_inet.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_file.o \
+	src/core/ngx_file.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_file.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_crc32.o \
+	src/core/ngx_crc32.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_crc32.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_murmurhash.o \
+	src/core/ngx_murmurhash.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_murmurhash.c:7:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0m[91msrc/core/ngx_murmurhash.c: In function 'ngx_murmur_hash2':
+src/core/ngx_murmurhash.c:37:11: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   37 |         h ^= data[2] << 16;
+      |         ~~^~~~~~~~~~~~~~~~
+src/core/ngx_murmurhash.c:38:5: note: here
+   38 |     case 2:
+      |     ^~~~
+src/core/ngx_murmurhash.c:39:11: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   39 |         h ^= data[1] << 8;
+      |         ~~^~~~~~~~~~~~~~~
+src/core/ngx_murmurhash.c:40:5: note: here
+   40 |     case 1:
+      |     ^~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_md5.o \
+	src/core/ngx_md5.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_md5.c:11:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_rbtree.o \
+	src/core/ngx_rbtree.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_rbtree.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_radix_tree.o \
+	src/core/ngx_radix_tree.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_radix_tree.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_slab.o \
+	src/core/ngx_slab.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_slab.c:7:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_times.o \
+	src/core/ngx_times.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_times.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_shmtx.o \
+	src/core/ngx_shmtx.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_shmtx.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_connection.o \
+	src/core/ngx_connection.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_connection.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_cycle.o \
+	src/core/ngx_cycle.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_cycle.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_spinlock.o \
+	src/core/ngx_spinlock.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_spinlock.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_cpuinfo.o \
+	src/core/ngx_cpuinfo.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_cpuinfo.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_conf_file.o \
+	src/core/ngx_conf_file.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_conf_file.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_resolver.o \
+	src/core/ngx_resolver.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_resolver.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_open_file_cache.o \
+	src/core/ngx_open_file_cache.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_open_file_cache.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/core/ngx_crypt.o \
+	src/core/ngx_crypt.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/core/ngx_crypt.c:7:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/event/ngx_event.o \
+	src/event/ngx_event.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/event/ngx_event.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/event/ngx_event_timer.o \
+	src/event/ngx_event_timer.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/event/ngx_event_timer.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/event/ngx_event_posted.o \
+	src/event/ngx_event_posted.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/event/ngx_event_posted.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/event/ngx_event_busy_lock.o \
+	src/event/ngx_event_busy_lock.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/event/ngx_event_busy_lock.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/event/ngx_event_accept.o \
+	src/event/ngx_event_accept.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/event/ngx_event_accept.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/event/ngx_event_connect.o \
+	src/event/ngx_event_connect.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/event/ngx_event_connect.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/event/ngx_event_pipe.o \
+	src/event/ngx_event_pipe.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/event/ngx_event_pipe.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_time.o \
+	src/os/unix/ngx_time.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_time.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_errno.o \
+	src/os/unix/ngx_errno.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_errno.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_alloc.o \
+	src/os/unix/ngx_alloc.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_alloc.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_files.o \
+	src/os/unix/ngx_files.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_files.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_socket.o \
+	src/os/unix/ngx_socket.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_socket.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_recv.o \
+	src/os/unix/ngx_recv.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_recv.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_readv_chain.o \
+	src/os/unix/ngx_readv_chain.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_readv_chain.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_udp_recv.o \
+	src/os/unix/ngx_udp_recv.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_udp_recv.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_send.o \
+	src/os/unix/ngx_send.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_send.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_writev_chain.o \
+	src/os/unix/ngx_writev_chain.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_writev_chain.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_channel.o \
+	src/os/unix/ngx_channel.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_channel.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_shmem.o \
+	src/os/unix/ngx_shmem.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_shmem.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_process.o \
+	src/os/unix/ngx_process.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_process.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0m[91msrc/os/unix/ngx_process.c: In function 'ngx_signal_handler':
+src/os/unix/ngx_process.c:402:28: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  402 |             ngx_debug_quit = 1;
+      |             ~~~~~~~~~~~~~~~^~~
+src/os/unix/ngx_process.c:403:9: note: here
+  403 |         case ngx_signal_value(NGX_SHUTDOWN_SIGNAL):
+      |         ^~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_daemon.o \
+	src/os/unix/ngx_daemon.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_daemon.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_setaffinity.o \
+	src/os/unix/ngx_setaffinity.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_setaffinity.c:7:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_setproctitle.o \
+	src/os/unix/ngx_setproctitle.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_setproctitle.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_posix_init.o \
+	src/os/unix/ngx_posix_init.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_posix_init.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+	-o objs/src/os/unix/ngx_user.o \
+	src/os/unix/ngx_user.c
+[91mIn file included from src/os/unix/ngx_linux_config.h:54,
+                 from src/core/ngx_config.h:26,
+                 from src/os/unix/ngx_user.c:8:
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+[0m[91msrc/os/unix/ngx_user.c: In function 'ngx_libc_crypt':
+src/os/unix/ngx_user.c:35:7: error: 'struct crypt_data' has no member named 'current_salt'
+   35 |     cd.current_salt[0] = ~salt[0];
+      |       ^
+[0m[91mmake[1]: *** [objs/Makefile:702: objs/src/os/unix/ngx_user.o] Error 1
+make: *** [Makefile:8: build] Error 2
+[0mmake[1]: Leaving directory '/usr/src/nginx'
+The command '/bin/sh -c ./configure --with-cc-opt="-fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type" --with-ld-opt="" && make' returned a non-zero code: 2
+EXIT_CODE=2

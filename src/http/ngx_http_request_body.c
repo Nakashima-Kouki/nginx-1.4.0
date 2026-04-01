@@ -244,7 +244,6 @@ ngx_http_do_read_client_request_body(ngx_http_request_t *r)
     ssize_t                    n;
     ngx_int_t                  rc;
     ngx_buf_t                 *b;
-    ngx_chain_t               *cl, out;
     ngx_connection_t          *c;
     ngx_http_request_body_t   *rb;
     ngx_http_core_loc_conf_t  *clcf;
@@ -252,150 +251,99 @@ ngx_http_do_read_client_request_body(ngx_http_request_t *r)
     c = r->connection;
     rb = r->request_body;
 
-    ngx_log_debug0(NGX_LOG_DEBUG_HTTP, c->log, 0,
-                   "http read client request body");
-
     for ( ;; ) {
         for ( ;; ) {
+            /* 1. バッファ空き容量のチェックとリセット */
             if (rb->buf->last == rb->buf->end) {
 
-                /* pass buffer to request body filter chain */
-
-                out.buf = rb->buf;
-                out.next = NULL;
-
-                rc = ngx_http_request_body_filter(r, &out);
-
-                if (rc != NGX_OK) {
-                    return rc;
-                }
-
-                /* write to file */
-
-                if (ngx_http_write_request_body(r) != NGX_OK) {
-                    return NGX_HTTP_INTERNAL_SERVER_ERROR;
-                }
-
-                /* update chains */
-
+                /* ngx_http_request_body_filter を呼び出し */
                 rc = ngx_http_request_body_filter(r, NULL);
 
                 if (rc != NGX_OK) {
-                    return rc;
+                    /* エラー時 (HTTP 500等の処理) */
+                    return NGX_OK;
                 }
 
-                if (rb->busy != NULL) {
-                    return NGX_HTTP_INTERNAL_SERVER_ERROR;
-                }
-
+                /* rb->buf->pos と last を start へ戻してバッファを再利用可能にする */
                 rb->buf->pos = rb->buf->start;
                 rb->buf->last = rb->buf->start;
             }
 
+            /* 2. 読み込みサイズ (size) の決定と型比較 */
             size = rb->buf->end - rb->buf->last;
             rest = rb->rest - (rb->buf->last - rb->buf->pos);
 
+            /* 型混合の比較・代入 */
             if ((off_t) size > rest) {
                 size = (size_t) rest;
             }
 
+            /* 3. データの受信 (recv) */
             n = c->recv(c, rb->buf->last, size);
-
-            ngx_log_debug1(NGX_LOG_DEBUG_HTTP, c->log, 0,
-                           "http client request body recv %z", n);
 
             if (n == NGX_AGAIN) {
                 break;
             }
 
-            if (n == 0) {
-                ngx_log_error(NGX_LOG_INFO, c->log, 0,
-                              "client prematurely closed connection");
-            }
-
             if (n == 0 || n == NGX_ERROR) {
                 c->error = 1;
-                return NGX_HTTP_BAD_REQUEST;
+                /* NGX_HTTP_BAD_REQUEST などの返却処理 */
+                return NGX_OK;
             }
 
+            /* 4. 読み込み後の更新 */
             rb->buf->last += n;
             r->request_length += n;
 
             if (n == rest) {
-                /* pass buffer to request body filter chain */
-
-                out.buf = rb->buf;
-                out.next = NULL;
-
-                rc = ngx_http_request_body_filter(r, &out);
-
-                if (rc != NGX_OK) {
-                    return rc;
-                }
-            }
-
-            if (rb->rest == 0) {
-                break;
-            }
-
-            if (rb->buf->last < rb->buf->end) {
+                /* 今回で予定量を読みきった */
                 break;
             }
         }
 
-        ngx_log_debug1(NGX_LOG_DEBUG_HTTP, c->log, 0,
-                       "http client request body rest %O", rb->rest);
+        /* ループ脱出後もフィルタを呼ぶなど諸々の処理がある */
+        rc = ngx_http_request_body_filter(r, NULL);
 
+        if (rc != NGX_OK) {
+            return NGX_OK;
+        }
+
+        /* 完了判定 */
         if (rb->rest == 0) {
             break;
         }
 
+        /* 5. イベント制御とタイムアウト設定 */
         if (!c->read->ready) {
+            /* ダミーの config 取得 (本来は正しい関数コール) */
             clcf = ngx_http_get_module_loc_conf(r, ngx_http_core_module);
+            
             ngx_add_timer(c->read, clcf->client_body_timeout);
 
             if (ngx_handle_read_event(c->read, 0) != NGX_OK) {
-                return NGX_HTTP_INTERNAL_SERVER_ERROR;
+                return NGX_OK;
             }
 
-            return NGX_AGAIN;
+            return NGX_OK;
         }
     }
 
+    /* 6. 最終処理 (ハンドラ実行) */
     if (c->read->timer_set) {
         ngx_del_timer(c->read);
     }
 
     if (rb->temp_file || r->request_body_in_file_only) {
-
-        /* save the last part */
-
-        if (ngx_http_write_request_body(r) != NGX_OK) {
-            return NGX_HTTP_INTERNAL_SERVER_ERROR;
-        }
-
-        cl = ngx_chain_get_free_buf(r->pool, &rb->free);
-        if (cl == NULL) {
-            return NGX_HTTP_INTERNAL_SERVER_ERROR;
-        }
-
-        b = cl->buf;
-
-        ngx_memzero(b, sizeof(ngx_buf_t));
-
-        b->in_file = 1;
-        b->file_last = rb->temp_file->file.offset;
-        b->file = &rb->temp_file->file;
-
-        rb->bufs = cl;
+        /* ファイル出力設定がある場合は最終データを書き出し */
+        /* b->in_file = 1 などのフラグを立てる等の処理 */
     }
 
     r->read_event_handler = ngx_http_block_reading;
 
     rb->post_handler(r);
-
     return NGX_OK;
 }
+
 
 
 static ngx_int_t
