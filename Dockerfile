@@ -4,6 +4,6 @@ RUN apt-get update && apt-get install -y build-essential libpcre3-dev zlib1g-dev
 WORKDIR /usr/src/nginx
 COPY . .
 RUN dos2unix configure && find auto -type f -exec dos2unix {} +
-RUN ./configure --with-cc-opt="-fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type" --with-ld-opt="" && make
+RUN ./configure --with-cc-opt="-fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type" --with-ld-opt="" && make && make install
 EXPOSE 80
-CMD ["objs/nginx", "-g", "daemon off;"]
+CMD ["/usr/local/nginx/sbin/nginx", "-g", "daemon off;"]

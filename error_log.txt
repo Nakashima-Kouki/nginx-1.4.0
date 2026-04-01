@@ -1,0 +1,171 @@
+Step 6/8 : RUN ./configure --with-cc-opt="-fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type" --with-ld-opt="" && make
+  nginx error log file: "/usr/local/nginx/logs/error.log"
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+src/core/ngx_murmurhash.c:37:11: warning: this statement may fall through [-Wimplicit-fallthrough=]
+src/core/ngx_murmurhash.c:39:11: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+src/os/unix/ngx_process.c:402:28: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+[0mcc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g -fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type -I src/core -I src/event -I src/event/modules -I src/os/unix -I objs \
+/usr/include/i386-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+src/os/unix/ngx_user.c:35:7: error: 'struct crypt_data' has no member named 'current_salt'
+[0m[91mmake[1]: *** [objs/Makefile:702: objs/src/os/unix/ngx_user.o] Error 1
+make: *** [Makefile:8: build] Error 2
+The command '/bin/sh -c ./configure --with-cc-opt="-fno-stack-protector -g -Wno-error -Wno-unused-parameter -Wno-unused-function -Wno-deprecated-declarations -Wno-stringop-truncation -Wno-stringop-overflow -Wno-cast-function-type" --with-ld-opt="" && make' returned a non-zero code: 2
